@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'therubyracer', platforms: :ruby
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
@@ -32,6 +33,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -44,8 +46,15 @@ group :development, :test do
   gem 'pry-rails'
   gem 'better_errors'
   gem 'letter_opener_web'
+  gem 'capistrano', '3.6.0'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano3-unicorn'
 end
   gem "font-awesome-rails"
   gem 'twitter-bootstrap-rails'
   gem 'devise'
   gem 'fog'
+  gem 'dotenv-rails'
+  gem 'unicorn'
