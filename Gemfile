@@ -52,6 +52,7 @@ group :development, :test do
   gem 'capistrano-rbenv'
   gem 'capistrano3-unicorn'
 end
+
   gem "font-awesome-rails"
   gem 'twitter-bootstrap-rails'
   gem 'devise'

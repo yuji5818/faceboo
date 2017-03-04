@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   devise_for :users
   resources :topics, only: [:index, :show, :new, :create, :edit, :update, :destroy]
 
+  resources :users, only: [:index]
+
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end

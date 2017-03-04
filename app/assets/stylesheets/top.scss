@@ -25,7 +25,7 @@ header ul{
   display: inline-block;
 }
 .dropdown-toggle{
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .btn-group{
@@ -35,9 +35,9 @@ header ul{
 .navbarleft{
   display: inline-block;
 
-  font-size: 30px;
+  font-size: 20px;
   list-style: none;
-  margin-right: 200px;
+  margin-right: 100px;
   vertical-align: middle;
 }
 .navbarright{
@@ -51,13 +51,21 @@ header ul{
 .navbarright li{
   display: inline-block;
   margin-right: 100px;
+  color: #fff;
 }
 .fa-envelope-o{
+  margin-left: 130px;
   color: #fff;
 }
 
+.btn-block{
+  background-color: #305097;
+  font-style: white;
+}
 
-
+.btn-facebook {
+  color: darken;
+}
 
 
 //.navbar {
@@ -105,10 +113,10 @@ header ul{
 }
 
 .main-header {
-  padding-bottom: 15%;
+  padding-bottom: 100%;
   width: 100%;
-  background-size: cover;
-  background-image: image-url("header.jpg");
+  background-size: 10%;
+  background-image: image-url("faceboo.png");
   background-attachment: fixed;
 }
 
@@ -172,8 +180,8 @@ html {
 }
 
 .flash {
-  color: white;
-  padding-top: 10px;
+  color: black;
+  padding-top: 30px;
 }
 
 body {
