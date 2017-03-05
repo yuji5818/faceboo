@@ -19,6 +19,7 @@ header{
 }
 header ul{
   display: inline-block;
+  color: white;
 }
 
 .dropdown-menu li{
@@ -26,6 +27,7 @@ header ul{
 }
 .dropdown-toggle{
   font-size: 20px;
+  color: white;
 }
 
 .btn-group{
@@ -34,7 +36,6 @@ header ul{
 
 .navbarleft{
   display: inline-block;
-
   font-size: 20px;
   list-style: none;
   margin-right: 100px;
@@ -47,24 +48,27 @@ header ul{
 .navbarleft li{
   display: inline-block;
   margin-left: 100px;
+  color: #fff;
 }
 .navbarright li{
+  color: white;
   display: inline-block;
   margin-right: 100px;
-  color: #fff;
 }
 .fa-envelope-o{
   margin-left: 130px;
   color: #fff;
 }
-
-.btn-block{
-  background-color: #305097;
-  font-style: white;
+.btn-fb{
+  background: #305097;
+  color: white;
+}
+.navbarleft li a{
+  color: white;
 }
 
-.btn-facebook {
-  color: darken;
+.retire{
+  color: red;
 }
 
 

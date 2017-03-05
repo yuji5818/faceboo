@@ -1,9 +1,9 @@
-require 'test_helper'
-
 class TopicsControllerTest < ActionController::TestCase
-  test "should get index" do
-    get :index
-    assert_response :success
+  before_action :authenticate_user!
+
+
+  def index
+    @topic = Topic.all
   end
 
 end
