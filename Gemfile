@@ -60,3 +60,9 @@ end
   gem 'dotenv-rails'
   gem 'unicorn'
   gem 'rails_12factor', group: :production
+  gem 'omniauth'
+  gem 'omniauth-twitter'
+  gem 'omniauth-facebook'
+  #image uploader
+  gem 'carrierwave'
+  gem 'rmagick'

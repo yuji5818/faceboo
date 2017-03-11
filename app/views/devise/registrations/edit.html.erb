@@ -16,6 +16,16 @@
       <%= f.text_field :name, class: "form-control" %>
     </div>
 
+
+
+    <div class="field">
+      <div class="profileimg"><%= profile_img(@user) if profile_img(@user) %></a>
+      <%= f.file_field :avatar %><br>
+      <%= f.hidden_field :avatar_cache %>
+    </div>
+
+  <% if @user.provider.blank? %>
+  
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
     <% end %>
@@ -39,19 +49,20 @@
       </div>
   　　<br>
       <div class="actions">
-        <%= f.submit "Update", class: "btn btn-primary btn-block" %>
+        <%= f.submit "更新する", class: "btn btn-primary btn-block" %>
       </div>
     <% end %>
+  <% end %>
 
     <h4>退会は下記からお願いします</b></h4>
 
     <p class="retire">本当に退会でよろしいですか？
       <%= link_to "退会する", registration_path(resource_name), data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-block" %>
     </p>
-
     <p>
-      <%= link_to "Back", :back, class: "btn btn-primary btn-block" %>
+      <%= link_to "戻る", :back, class: "btn btn-primary btn-block" %>
     </p>
+
 
   </div>
 </div>
