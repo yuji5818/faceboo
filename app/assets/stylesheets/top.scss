@@ -77,8 +77,47 @@ header ul{
     height: 80px;
   }
 }
+body{
+  background: #C0C0C0;
+}
 
 
+//投稿一覧のCSS始まり
+.row{
+  margin-top: 5%;
+  background: white;
+}
+
+.content{
+  border: single #ddd;
+  border-style: inherit;
+  margin: 30px;
+}
+.time{
+  color: #90949c;
+}
+
+.topic_content{
+  color: #90949c;
+}
+
+.topic_profile_img{
+  img{
+  height: 100px;
+  width: 100px;
+  margin-right: 600px;
+  }
+}
+
+.topicimg{
+  img{
+  width: 486px;
+  height: 255px;
+  border: solid 5px #F5F5F5;
+  }
+}
+
+//投稿一覧ページのCSS終わり
 
 
 //.navbar {

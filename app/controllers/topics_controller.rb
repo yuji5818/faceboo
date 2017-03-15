@@ -6,8 +6,10 @@ class TopicsController < ApplicationController
     @topics = Topic.all
   end
 
+  # showアククションを定義します。入力フォームと一覧を表示するためインスタンスを2つ生成します。
   def show
-    @topic = Topic.find(params[:id])
+    @comment = @topic.comments.build
+    @comments = @topic.comments
   end
 
   def new
@@ -17,7 +19,7 @@ class TopicsController < ApplicationController
   def create
     @topic = current_user.topics.build(topics_params)
     if @topic.save
-      redirect_to topic_path, notice: "ブログを作成しました！"
+      redirect_to topics_path, notice: "topicを作成しました！"
       NoticeMailer.sendmail_topic(@topic).deliver
     else
       render 'new'
@@ -47,7 +49,7 @@ class TopicsController < ApplicationController
 
   private
   def topics_params
-    params.require(:topic).permit(:content)
+    params.require(:topic).permit(:image, :content)
   end
 
   def set_topic

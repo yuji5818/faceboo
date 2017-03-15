@@ -5,8 +5,8 @@ class NoticeMailer < ApplicationMailer
   #
   #   en.notice_mailer.sendmail_topic.subject
   #
-  def sendmail_topic
-    @greeting = "Hi"
+  def sendmail_topic(topic)
+    @topic = topic
 
     mail to: "yuji05225818@gmail.com",
      subject: '【faceboo】topicが投稿されました'

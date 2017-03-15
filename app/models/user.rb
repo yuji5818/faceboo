@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
 
   has_many :followed_users, through: :relationships, source: :followed
   has_many :followers, through: :reverse_relationships, source: :follower
+  has_many :topics, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   def self.create_unique_string
     SecureRandom.uuid
@@ -50,7 +52,7 @@ class User < ActiveRecord::Base
       end
       user
     end
-    
+
     def update_with_password(params, *options)
       if provider.blank?
         super
