@@ -19,13 +19,13 @@
 
 
     <div class="field">
-      <div class="profileimg"><%= profile_img(@user) if profile_img(@user) %></a>
+      <div class="profileimg"><%= profile_img(@user) if profile_img(@user) %></a></div>
       <%= f.file_field :avatar %><br>
       <%= f.hidden_field :avatar_cache %>
     </div>
 
   <% if @user.provider.blank? %>
-  
+
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
     <% end %>

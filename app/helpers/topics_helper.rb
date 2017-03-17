@@ -3,7 +3,7 @@ module TopicsHelper
     if action_name == 'new'
       topics_path
     elsif action_name == 'edit'
-      topic_path(id)
+      topic_path
     end
   end
 end

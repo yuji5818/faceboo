@@ -1,2 +1,13 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<div class="container">
+  <h2>ユーザー一覧</h2>
+<!--  <div class="container-child col-md-2 col-sm-4 col-xs-6 ">-->
+    <div id="grid">
+       <% @users.each do |user| %>
+        <li class="userbox"><%= profile_img(user) %></></li>
+        <li class="userbox"><%= user.name %></li>
+        <li class="userbox"><%= user.email %></li>
+        <li class="userbox"><%= render partial: 'follow_form', locals: { user: user } if signed_in? %></li>
+        <% end %>
+    </div>
+  </div>
+</div>

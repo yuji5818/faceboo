@@ -133,10 +133,35 @@ body{
 //    margin-bottom: 0px;
 //}
 
+//コメント機能CSS始まり
 .child row{
   padding-bottom: 10px;
 }
+//コメント機能CSS終わり
 
+//ユーザー一覧ページCSS始まり
+#grid{
+  width: 750px;
+}
+
+.userbox{
+  img {
+    width: 80px;
+    height: 80px;
+  }
+}
+.userbox{
+  margin: 5px;
+  float: left;
+  list-style: none;
+  clear: both;
+}
+
+.followbutton{
+  margin: 5px;
+}
+
+//ユーザー一覧ページCSS終わり
 
 
 .navbar-default {
