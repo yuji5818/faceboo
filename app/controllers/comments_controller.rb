@@ -19,6 +19,34 @@ class CommentsController < ApplicationController
     end
   end
 
+  def edit
+    @comment = Comment.find(params[:id])
+  end
+
+  def update
+    # ログインユーザーに紐付けてインスタンス生成するためbuildメソッドを使用します。
+    @comment = Comment.find(params[:id])
+    @comment.update(comment_params)
+    @topic = @comment.topic
+    # クライアント要求に応じてフォーマットを変更
+    respond_to do |format|
+        format.js { render :index, notice: 'コメントを投稿しました。' }
+    end
+  end
+
+  def destroy
+      # ログインユーザーに紐付けてインスタンス生成するためbuildメソッドを使用します。
+      @comment = Comment.find(params[:id])
+      @comment = current_user.comments.destroy(comment_params)
+      @topic = @comment.topic
+      # クライアント要求に応じてフォーマットを変更
+      respond_to do |format|
+        @comment.destroy
+      format.js { render :index, notice: 'コメントを削除しました' }
+      end
+  end
+
+
   private
     # ストロングパラメーター
     def comment_params
