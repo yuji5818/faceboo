@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
 # コメントを保存、投稿するためのアクションです。
+
   def create
     # ログインユーザーに紐付けてインスタンス生成するためbuildメソッドを使用します。
     @comment = current_user.comments.build(comment_params)
@@ -24,25 +25,31 @@ class CommentsController < ApplicationController
   end
 
   def update
-    # ログインユーザーに紐付けてインスタンス生成するためbuildメソッドを使用します。
+    # コメント修正
+    @Comment = Comment.all.order(updated_at: :desc)
     @comment = Comment.find(params[:id])
-    @comment.update(comment_params)
     @topic = @comment.topic
-    # クライアント要求に応じてフォーマットを変更
+      # JSで返す
     respond_to do |format|
-        format.js { render :index, notice: 'コメントを投稿しました。' }
+      if @comment.update(comment_params)
+          format.html { redirect_to topic_path(@topic), notice: '' }
+          format.json { render :show, status: :created, location: @comment }
+          # JS形式でレスポンスを返します。
+          format.js { render :index }
+        else
+          format.html { render :new }
+          format.json { render json: @comment.errors, status: :unprocessable_entity }
+        end
     end
   end
 
   def destroy
-      # ログインユーザーに紐付けてインスタンス生成するためbuildメソッドを使用します。
-      @comment = Comment.find(params[:id])
-      @comment = current_user.comments.destroy(comment_params)
-      @topic = @comment.topic
-      # クライアント要求に応じてフォーマットを変更
+      # コメント削除
+    @comment = Comment.find(params[:id])
+    @comment.destroy(comment_params)
+      # JSで返す
       respond_to do |format|
-        @comment.destroy
-      format.js { render :index, notice: 'コメントを削除しました' }
+        format.js { render :index }
       end
   end
 
