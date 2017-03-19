@@ -44,12 +44,12 @@
       </div>
 
       <div class="field">
-        <%= f.label :現在のパスワード %> ※パスワード変更確認のため現在のパスワードご入力ください<br />
+        <%= f.label :現在のパスワード %> <p class="currentpass">※登録内容変更の場合は現在のパスワードを必ずご入力ください</p>
         <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %>
       </div>
   　　<br>
       <div class="actions">
-        <%= f.submit "更新する", class: "btn btn-primary btn-block" %>
+        <%= f.submit "更新する", class: "btn btn-block btn-fb" %>
       </div>
     <% end %>
   <% end %>

@@ -18,6 +18,21 @@
     word-wrap: break-word;
   }
 }
+//ヘッダーイメージアイコン
+.usersicon{
+  color: white;
+}
+.facebooicon{
+  
+    width: 50px;
+    height: 50px;
+
+}
+
+
+
+
+//
 
 .navbar-default {
     border: 0;
@@ -75,8 +90,18 @@ header ul{
 .navbarleft li a{
   color: white;
 }
+//確認用メールCSS
+.confirm_mail{
+  color: red;
+}
+//確認用メールCSS終わり
 
+
+//マイページのCSS
 .retire{
+  color: red;
+}
+.currentpass{
   color: red;
 }
 
@@ -86,8 +111,10 @@ header ul{
     height: 80px;
   }
 }
+//マイページのCSS終わり
+
 body{
-  background: #C0C0C0;
+  background: #e9ebee;
 }
 
 

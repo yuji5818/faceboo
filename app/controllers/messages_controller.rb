@@ -10,7 +10,8 @@ class MessagesController < ApplicationController
       @messages = @messages[-10..-1]
     end
 
-    if params[:m]
+
+    if params[:m] #もしメッセージが最新（最後）のメッセージで、かつユーザIDが自分（ログインユーザ）でなければ、その最新（最後）のメッセージを既読にする
       @over_ten = false
       @messages = @conversation.messages
     end
@@ -30,5 +31,10 @@ class MessagesController < ApplicationController
       redirect_to conversation_messages_path(@conversation)
     end
   end
-  
+
+  private
+  def message_params
+    params.require(:message).permit(:body, :user_id)
+  end
+
 end

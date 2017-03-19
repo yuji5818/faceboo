@@ -1,5 +1,6 @@
-<p>Welcome <%= @email %>!</p>
+<h1>facebooへようこそ！ <%= @email %>様</h1>
 
-<p>You can confirm your account email through the link below:</p>
+<p>登録確認メールです！下記より、本登録を行ってください。</p>
+<p class="confirm_mail">ご注意事項：本登録後マイページより必ずお名前をご登録ください。</p>
 
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+<p><%= link_to 'facebooに本登録する', confirmation_url(@resource, confirmation_token: @token) %></p>
