@@ -26,7 +26,6 @@ class CommentsController < ApplicationController
 
   def update
     # コメント修正
-    @Comment = Comment.all.order(updated_at: :desc)
     @comment = Comment.find(params[:id])
     @topic = @comment.topic
       # JSで返す
