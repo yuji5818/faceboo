@@ -16,14 +16,6 @@
       <%= f.text_field :name, class: "form-control" %>
     </div>
 
-
-
-    <div class="field">
-      <div class="profileimg"><%= profile_img(@user) if profile_img(@user) %></a></div>
-      <%= f.file_field :avatar %><br>
-      <%= f.hidden_field :avatar_cache %>
-    </div>
-
   <% if @user.provider.blank? %>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -47,12 +39,19 @@
         <%= f.label :現在のパスワード %> <p class="currentpass">※登録内容変更の場合は現在のパスワードを必ずご入力ください</p>
         <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %>
       </div>
-  　　<br>
+
+      <% end %>
+
+      <div class="field">
+        <div class="profileimg"><%= profile_img(@user) if profile_img(@user) %></a></div>
+        <%= f.file_field :avatar %><br>
+        <%= f.hidden_field :avatar_cache %>
+      </div>
       <div class="actions">
         <%= f.submit "更新する", class: "btn btn-block btn-fb" %>
       </div>
-    <% end %>
   <% end %>
+
 
     <h4>退会は下記からお願いします</b></h4>
 
