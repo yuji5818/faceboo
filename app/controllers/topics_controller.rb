@@ -33,6 +33,11 @@ class TopicsController < ApplicationController
   def update
     @topic = Topic.find(params[:id])
     @topic.update(topics_params)
+    if @topic.save
+      redirect_to topics_path,　notice: "Topicを更新しました！"
+    else
+     render 'edit'
+    end
   end
 
   def destroy
