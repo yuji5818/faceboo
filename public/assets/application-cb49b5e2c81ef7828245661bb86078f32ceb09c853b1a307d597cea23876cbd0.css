@@ -28,6 +28,9 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
   line-height: 0.75em;
   vertical-align: -15%;
 }
+.icon{
+  padding-top: 10px;
+}
 .fa-2x {
   font-size: 2em;
 }
@@ -2230,4 +2233,3 @@ body {
 
 
  */
-

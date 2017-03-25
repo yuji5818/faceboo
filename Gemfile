@@ -66,3 +66,4 @@ end
   #image uploader
   gem 'carrierwave'
   gem 'rmagick'
+  gem 'faker'

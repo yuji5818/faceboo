@@ -23,14 +23,10 @@
   color: white;
 }
 .facebooicon{
-  
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
 
 }
-
-
-
 
 //
 
@@ -43,7 +39,6 @@ header{
 }
 header ul{
   display: inline-block;
-  color: white;
 }
 
 .dropdown-menu li{
@@ -57,39 +52,47 @@ header ul{
 .btn-group{
   display: inline-block;
 }
-
+.navbarall{
+ width: 100%;
+}
 .navbarleft{
-  display: inline-block;
-  font-size: 20px;
+  display: inline-flex;
+  font-size: 30px;
   list-style: none;
-  margin-right: 100px;
   vertical-align: middle;
 }
-.navbarright{
+.nav__item{
   vertical-align: middle;
+  float: left;
+  clear: both;
 }
 
 .navbarleft li{
   display: inline-block;
   margin-left: 100px;
-  color: #fff;
 }
-.navbarright li{
-  color: white;
-  display: inline-block;
-  margin-right: 100px;
+
+.newsfeed{
+  padding-top: 10px;
+  font-size: 20px;
 }
+
 .fa-envelope-o{
-  margin-left: 130px;
+  margin-left: 100px;
   color: #fff;
 }
 .btn-fb{
   background: #305097;
   color: white;
 }
-.navbarleft li a{
+.nav_item a{
   color: white;
 }
+.menu{
+  color: black;
+}
+
+
 //確認用メールCSS
 .confirm_mail{
   color: red;
@@ -220,6 +223,7 @@ body{
     &:hover, &:focus {
       color: white;
       margin-left: 200px;
+      padding-right: 50px;
     }
   }
   .navbar-default .navbar-toggle {
