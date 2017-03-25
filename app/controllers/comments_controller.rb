@@ -45,13 +45,13 @@ class CommentsController < ApplicationController
   def destroy
       # コメント削除
     @comment = Comment.find(params[:id])
+    @topic = @comment.topic
     @comment.destroy
       # JSで返す
       respond_to do |format|
         format.js { render :index }
       end
   end
-
 
   private
     # ストロングパラメーター
